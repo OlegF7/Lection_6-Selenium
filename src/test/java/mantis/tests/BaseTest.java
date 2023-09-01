@@ -8,17 +8,18 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.asserts.SoftAssert;
 
 public class BaseTest {
     public WebDriver driver;
 
     @BeforeEach
     public void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
 
+        driver = new ChromeDriver();
         driver.get("https://academ-it.ru/mantisbt/login_page.php");
         driver.manage().window().maximize();
+
     }
 
 

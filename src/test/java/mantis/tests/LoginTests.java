@@ -17,6 +17,7 @@ public class LoginTests extends BaseTest{
     public void loginUrlTest() {
         String currentUrl = driver.getCurrentUrl();
         Assertions.assertEquals("https://academ-it.ru/mantisbt/login_page.php", currentUrl);
+
     }
 
     @Test
