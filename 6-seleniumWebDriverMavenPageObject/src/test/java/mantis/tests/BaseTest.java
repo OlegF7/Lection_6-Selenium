@@ -15,11 +15,11 @@ public class BaseTest {
 
     @BeforeEach
     public void setUp() {
-        WebDriverManager.chromedriver().setup();
+
         driver = new ChromeDriver();
-        SoftAssert softAssert = new SoftAssert();
         driver.get("https://academ-it.ru/mantisbt/login_page.php");
         driver.manage().window().maximize();
+
     }
 
 
