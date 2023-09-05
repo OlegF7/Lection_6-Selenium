@@ -28,7 +28,7 @@ public class ReportIssuePage {
     private WebElement deleteIssue;
 
     @FindBy(xpath = "//*[@id='action-group-div']//div[2]/input")
-    private WebElement deleteIssue2;
+    private WebElement deleteIssueFinal;
 
     @FindBy(xpath = "//*[@id='buglist']/tbody/tr[1]/td[11]")
     private WebElement summaryEndtest;
@@ -41,23 +41,24 @@ public class ReportIssuePage {
         reportIssue.click();
     }
 
-    public void createIssue() {
-        summary.sendKeys("Summary 26.08.23");
+    public void createIssue(String KeysToSend, String descriptionKeysToSend) {
+        summary.sendKeys(KeysToSend);
         description.click();
-        description.sendKeys("Test 27.08.2023");
+        description.sendKeys(descriptionKeysToSend);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement element = btnSubmit;
         js.executeScript("arguments[0].scrollIntoView(true);", element);
         btnSubmit.click();
     }
 
-    public void clickIdIssue() {idIssue.click();}
+    public void clickIdIssue() {
+        idIssue.click();}
 
     public void clickDeleteIssue() {
         deleteIssue.click();
     }
-    public void clickDeleteIssue2() {
-        deleteIssue2.click();
+    public void clickDeleteIssueFinal() {
+        deleteIssueFinal.click();
     }
     public String getSummaryEndTest() {
         return summaryEndtest.getText();
