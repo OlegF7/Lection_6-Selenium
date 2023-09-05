@@ -27,8 +27,8 @@ public class ReportIssueTest extends BaseTest {
         mantisSite.reportIssuePage().clickDeleteIssue();
         mantisSite.reportIssuePage().clickDeleteIssueFinal();
 
-        String s1 = "Summary 26.08.23";
-        asert.assertNotEquals(mantisSite.reportIssuePage().getSummaryEndTest(), s1, "Assert Failed as the two string are EQUAL");
+        String nameIssue = "Summary 26.08.23";
+        asert.assertNotEquals(mantisSite.reportIssuePage().getSummaryEndTest(), nameIssue, "Assert Failed as the two string are EQUAL");
         asert.assertAll();
         System.out.println("Test passed");
     }

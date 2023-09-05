@@ -41,10 +41,10 @@ public class ReportIssuePage {
         reportIssue.click();
     }
 
-    public void createIssue(String KeysToSend, String descriptionKeysToSend) {
-        summary.sendKeys(KeysToSend);
+    public void createIssue(String nameIssue, String descriptionIssue) {
+        summary.sendKeys(nameIssue);
         description.click();
-        description.sendKeys(descriptionKeysToSend);
+        description.sendKeys(descriptionIssue);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement element = btnSubmit;
         js.executeScript("arguments[0].scrollIntoView(true);", element);
